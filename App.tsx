@@ -1,12 +1,14 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { FinancesProvider } from "./src/contexts/FinancesContext";
+import SourceInput from "./src/SourceInput";
 
 export default function App() {
   return (
     <FinancesProvider>
       <View style={styles.container}>
         <Text>Open up App.tsx to start working on your app!</Text>
+        <SourceInput />
       </View>
     </FinancesProvider>
   );
