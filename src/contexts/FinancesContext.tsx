@@ -3,6 +3,7 @@ import React, { createContext, ReactNode, useMemo, useReducer } from "react";
 interface Source {
   name: string;
   values: number[];
+  addedAt: Date;
 }
 
 interface Finances {
@@ -53,7 +54,8 @@ export const FinancesProvider = ({ children }: Props) => {
         type: "ADD_SOURCE",
         payload: {
           name: sourceName,
-          values: []
+          values: [],
+          addedAt: new Date()
         }
       });
     },
